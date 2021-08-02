@@ -3,7 +3,8 @@ import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import {
-    Splash
+    Splash,
+    Home,
 } from '../screens';
 import { ROUTES } from '../constants';
 
@@ -20,6 +21,10 @@ const Root = () => {
             <Stack.Screen 
                 name={ROUTES.SPLASH_ROUTE_NAME}
                 component={Splash}
+            />
+            <Stack.Screen 
+                name={ROUTES.HOME_ROUTE_NAME}
+                component={Home}
             />
         </Stack.Navigator>
     );

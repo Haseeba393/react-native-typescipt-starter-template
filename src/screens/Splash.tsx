@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
     StyleSheet,
     View,
@@ -7,13 +7,21 @@ import {
 } from 'react-native';
 import { useColors } from '../custom-hooks';
 import { FONTS, ICONS, IMAGES, THEME } from '../constants';
+import { _gotoHomeScreen } from '../navigation/service';
+import { NavProps } from '../interfaces/interfaces';
 
-const Splash = () => {
+const Splash = (props: NavProps) => {
 
     const colors = useColors();
 
+    useEffect(()=>{
+        setTimeout(() => {
+            _gotoHomeScreen(props.navigation);
+        }, 1500);
+    },[])
+
     return(
-        <View style={Styles._mainContainer}>
+        <View style={[Styles._mainContainer,{backgroundColor: colors.background}]}>
             <Image 
                 source={IMAGES.LOGO}
                 resizeMode='contain'
@@ -24,7 +32,7 @@ const Splash = () => {
                 resizeMode='contain'
                 style={Styles._icon}
             />
-            <Text style={[Styles._text,{color: colors.primary}]}>Hello To React World</Text>
+            <Text style={[Styles._text,{color: colors.primary}]}>Welcome To React Native</Text>
         </View>
     );
 }
