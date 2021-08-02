@@ -1,21 +1,19 @@
 import 'react-native-gesture-handler';
-import {
-  useColorScheme
-} from 'react-native';
-import React, {useState} from 'react';
-
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import Root from './src/navigation/Root';
 import {
   THEME
 } from './src/constants';
-export const ThemeContext = React.createContext();
+import useThemeManager from './src/custom-hooks/useThemeManager';
 
 const App = () => {
 
-  const scheme = useColorScheme();
-  const [isDarkTheme, setTheme] = useState(scheme === 'dark' ? true : false);
-  const switchTheme = (theme:boolean) => setTheme(theme);
+  const {
+    ThemeContext,
+    isDarkTheme,
+    switchTheme
+  } = useThemeManager();
 
   return(
     <ThemeContext.Provider

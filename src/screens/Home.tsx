@@ -8,7 +8,7 @@ import {
 
 import { useColors } from '../custom-hooks';
 import { FONTS, THEME } from '../constants';
-import { ThemeContext } from '../../App';
+import { ThemeContext } from '../custom-hooks/useThemeManager';
 
 const Home = () => {
 

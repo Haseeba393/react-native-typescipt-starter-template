@@ -5,6 +5,7 @@ import {
     Text,
     Image
 } from 'react-native';
+
 import { useColors } from '../custom-hooks';
 import { FONTS, ICONS, IMAGES, THEME } from '../constants';
 import { _gotoHomeScreen } from '../navigation/service';
