@@ -10,7 +10,7 @@ This is typescript enabled React Native Template which you can use for almost ev
 
 # Third Party Libraries
 <ol>
-  <li>React Native Modal</li>
+  <li><a href="https://github.com/react-native-modal/react-native-modal">React Native Modal</a></li>
 </ol>
 
 # Todo
