@@ -4,6 +4,6 @@ export interface NavProps {
 
 export interface LanguageModalProps {
     visibility: boolean,
-    languages: string[],
+    languages: {key: string, name: string, tag: string}[],
     closeLangModal: Function
 }

@@ -2,9 +2,7 @@ import React, {useContext} from 'react';
 import {
     StyleSheet,
     View,
-    Switch,
     Text,
-    TouchableOpacity
 } from 'react-native';
 import { FONTS } from '../constants';
 

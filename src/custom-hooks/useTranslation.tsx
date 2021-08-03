@@ -7,7 +7,7 @@ import {
     I18nManager,
 } from "react-native";
 
-export const LanguageContext = React.createContext();
+export const LanguageContext = React.createContext(null);
 
 const useTranslation = () => {
 

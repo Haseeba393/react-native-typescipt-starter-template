@@ -24,9 +24,9 @@ const LanguageModal = (props: LanguageModalProps) => {
     return (
         <Modal 
             animationIn='slideInUp'
-            animationInTiming={1000}
+            animationInTiming={700}
             animationOut='slideOutDown'
-            animationOutTiming={1000}
+            animationOutTiming={700}
             isVisible={props.visibility}
             onBackButtonPress={()=>{ props.closeLangModal() }}
             onBackdropPress={()=> { props.closeLangModal() }}
