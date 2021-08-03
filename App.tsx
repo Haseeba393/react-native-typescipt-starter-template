@@ -6,6 +6,7 @@ import {
   THEME
 } from './src/constants';
 import useThemeManager from './src/custom-hooks/useThemeManager';
+import useTranslation from './src/custom-hooks/useTranslation';
 
 const App = () => {
 
@@ -15,18 +16,30 @@ const App = () => {
     switchTheme
   } = useThemeManager();
 
+  const {
+    language,
+    _switchLanguage,
+    LanguageContext
+  } = useTranslation();
+
   return(
-    <ThemeContext.Provider
+    <LanguageContext.Provider
       value={{
-        isDarkTheme, switchTheme
+        language, _switchLanguage
       }}
     >
-      <NavigationContainer
-        theme={!isDarkTheme ? THEME.LIGHT_THEME : THEME.DARK_THEME}
+      <ThemeContext.Provider
+        value={{
+          isDarkTheme, switchTheme
+        }}
       >
-        <Root />
-      </NavigationContainer>
-    </ThemeContext.Provider>
+        <NavigationContainer
+          theme={!isDarkTheme ? THEME.LIGHT_THEME : THEME.DARK_THEME}
+        >
+          <Root />
+        </NavigationContainer>
+      </ThemeContext.Provider>
+    </LanguageContext.Provider>
   );
 }
 
