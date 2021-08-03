@@ -1,4 +1,9 @@
 {
-    "themeSwitchText": "Changer de thème",
-    "langueSwitchHeading": "Choisissez votre langue préférée"
+    "darkMode": "Mode sombre",
+    "langueSwitchHeading": "langue préférée",
+    "chooseLanguage": "Choisissez la langue",
+    "homeTab": "Onglet Accueil",
+    "home": "Domicile",
+    "settings": "Paramètres",
+    "close": "Fermer"
 }

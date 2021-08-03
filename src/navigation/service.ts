@@ -5,5 +5,5 @@
 import { ROUTES } from "../constants";
 
 export const _gotoHomeScreen = (navigation: any) => {
-    navigation.navigate(ROUTES.HOME_ROUTE_NAME);
+    navigation.navigate(ROUTES.MAIN_HOME);
 }

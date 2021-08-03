@@ -1,4 +1,9 @@
 {
-    "themeSwitchText": "Switch theme",
-    "langueSwitchHeading": "Choose your preferred language"
+    "darkMode": "Dark Mode",
+    "langueSwitchHeading": "Preferred Language",
+    "chooseLanguage": "Choose Language",
+    "homeTab": "Home Tab",
+    "home": "Home",
+    "settings": "Settings",
+    "close": "Close"
 }

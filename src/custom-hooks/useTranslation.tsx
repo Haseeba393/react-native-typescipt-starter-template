@@ -11,8 +11,21 @@ export const LanguageContext = React.createContext();
 
 const useTranslation = () => {
 
-    const [language, setLanguage] = useState(null);
-    
+    const [selectedLanguage, setSelectedLanguage] = useState(null);
+    const [languageName, setLanguageName] = useState('');
+    const languages = [
+        {
+            key: '0',
+            name: 'English',
+            tag: 'en',
+        },
+        {
+            key: '1',
+            name: 'French',
+            tag: 'fr',
+        }
+    ];
+
     const translationGetters = {
         // lazy requires (metro bundler does not support symlinks)
         en: () => require("../translation/en.json"),
@@ -28,10 +41,12 @@ const useTranslation = () => {
     const _switchLanguage = (languageTag) => {
         switch (languageTag) {
             case 'en':
-                setLanguage( require("../translation/en.json"));
+                setSelectedLanguage( require("../translation/en.json"));
+                setLanguageName('English');
                 break;
             case 'fr':
-                setLanguage( require("../translation/fr.json"));
+                setSelectedLanguage( require("../translation/fr.json"));
+                setLanguageName('French');
                 break;
             default:
                 break;
@@ -56,10 +71,12 @@ const useTranslation = () => {
 
         switch (languageTag) {
             case 'en':
-                setLanguage( require("../translation/en.json"));
+                setSelectedLanguage( require("../translation/en.json"));
+                setLanguageName('English');
                 break;
             case 'fr':
-                setLanguage( require("../translation/fr.json"));
+                setSelectedLanguage( require("../translation/fr.json"));
+                setLanguageName('French');
                 break;
             default:
                 break;
@@ -68,7 +85,9 @@ const useTranslation = () => {
     },[]);
 
     return {
-        language,
+        selectedLanguage,
+        languages,
+        languageName,
         _switchLanguage,
         LanguageContext,
     }

@@ -17,7 +17,9 @@ const App = () => {
   } = useThemeManager();
 
   const {
-    language,
+    selectedLanguage,
+    languages,
+    languageName,
     _switchLanguage,
     LanguageContext
   } = useTranslation();
@@ -25,7 +27,7 @@ const App = () => {
   return(
     <LanguageContext.Provider
       value={{
-        language, _switchLanguage
+        selectedLanguage, languages, languageName, _switchLanguage
       }}
     >
       <ThemeContext.Provider

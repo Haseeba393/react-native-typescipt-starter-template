@@ -17,6 +17,8 @@ const SIZES = {
     radius_10: 10,
     radius_15: 15,
     radius_20: 20,
+    tab_icon_size: 24,
+    header_icon_size: 24,
 }
 
 const LIGHT_THEME = {
@@ -28,6 +30,19 @@ const LIGHT_THEME = {
         text: 'rgb(28, 28, 30)',
         border: 'rgb(199, 199, 204)',
         notification: 'rgb(255, 69, 58)',
+        whiteColor: '#fff',
+        blackColor: '#000',
+        redColor: 'red',
+        blueColor: 'blue',
+        greenColor: 'green',
+        headerTextColor: '#fff',
+        bottomTabTextColor: 'rgb(255, 45, 85)',
+        bottomTabIconColor: 'rgb(255, 45, 85)',
+        bottomTabBackground: '#fff',
+        switchThumbColor: 'rgb(255, 45, 85)',
+        switchTrackFalseColor: 'rgb(199, 199, 204)',
+        switchTrackTrueColor: 'rgb(255, 69, 58)',
+        modalBackground: 'rgb(255,255,255)',
     },
 }
 
@@ -40,6 +55,19 @@ const DARK_THEME = {
         text: 'rgb(255, 255, 255)',
         border: 'rgb(199, 199, 204)',
         notification: 'rgb(255, 69, 58)',
+        whiteColor: '#fff',
+        blackColor: '#000',
+        redColor: 'red',
+        blueColor: 'blue',
+        greenColor: 'green',
+        headerTextColor: '#fff',
+        bottomTabTextColor: 'rgb(255, 45, 85)',
+        bottomTabIconColor: '#fff',
+        bottomTabBackground: '#000',
+        switchThumbColor: 'rgb(255, 45, 85)',
+        switchTrackFalseColor: 'rgb(199, 199, 204)',
+        switchTrackTrueColor: '#fff',
+        modalBackground: 'rgba(255,255,255,0.2)',
     },
 }
 
